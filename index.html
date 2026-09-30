@@ -3,367 +3,265 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Don Joaquín · Parrilla en Colegiales | Reservá por WhatsApp</title>
-<meta name="description" content="Don Joaquín – parrilla al quebracho, vinos de autor y ambiente familiar en Colegiales. Reservá mesa por WhatsApp en 30 segundos. Lun a Vie 12–15 / 20–00, Sáb y Dom 12–00.">
-<meta name="theme-color" content="#1A1714">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥩</text></svg>">
-<meta property="og:title" content="Don Joaquín – Reservá tu mesa">
-<meta property="og:description" content="Parrilla al quebracho, vinos de autor y ambiente familiar en Colegiales. Reserva en 30 segundos por WhatsApp.">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="es_AR">
+<title>Celulares Demo · Service y accesorios | Consultá por WhatsApp</title>
+<meta name="description" content="Local de celulares demo. Reparación en el día, accesorios y liberaciones. Dejanos tu reseña en Google. Lun a Sáb 10–20. Consultá por WhatsApp.">
+<meta name="theme-color" content="#0B1526">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📱</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Restaurant",
-  "name": "Don Joaquín – Parrilla & Cocina de Estación",
-  "servesCuisine": "Parrilla argentina",
-  "priceRange": "$$",
-  "telephone": "+54 9 11 5555-0134",
-  "address": { "@type": "PostalAddress", "streetAddress": "Av. Álvarez Thomas 1123", "addressLocality": "Colegiales, Buenos Aires", "addressCountry": "AR" },
-  "openingHours": ["Mo-Fr 12:00-15:00", "Mo-Fr 20:00-00:00", "Sa-Su 12:00-00:00"],
-  "acceptsReservations": "True"
-}
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #1A1714;
-    --card: #221D18;
-    --card-2: #2A2420;
-    --accent: #C9A227;
-    --accent-hover: #DBB93A;
-    --text: #F2EDE4;
-    --text-dim: #C4BBAE;
-    --border: #3A342E;
-    --ok: #5FB878;
-    --err: #E0786A;
-    --radius: 10px;
+    --bg: #0B1526; --bg2: #101D33; --card: #131F36; --card2: #182740;
+    --ink: #F2F5FA; --soft: #A9B6CC; --muted: #7C8AA3;
+    --accent: #2FD180; --accent-dark: #1DA862; --gold: #E8B93C;
+    --border: #24344F; --radius: 16px;
+    --shadow: 0 14px 36px -14px rgba(0,0,0,.6);
     --max: 960px;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    background: radial-gradient(1200px 600px at 50% -10%, #2b251f 0%, var(--bg) 60%) fixed, var(--bg);
-    color: var(--text);
-    font-family: 'Work Sans', system-ui, -apple-system, sans-serif;
-    padding: 0 16px 90px;
-    display: flex;
-    justify-content: center;
-    line-height: 1.5;
-  }
-  .skip { position: absolute; left: -999px; top: 0; background: var(--accent); color: #000; padding: 8px 12px; z-index: 99; border-radius: 0 0 8px 0; }
-  .skip:focus { left: 0; }
+  body { margin: 0; font-family: 'Inter', system-ui, sans-serif; color: var(--ink);
+    background: radial-gradient(700px 320px at 50% -10%, #1B3A5F 0%, var(--bg) 60%) fixed, var(--bg);
+    display: flex; justify-content: center; padding: 0 16px 96px; line-height: 1.55; }
   .wrap { width: 100%; max-width: var(--max); }
-  .hero { text-align: center; padding: 36px 0 20px; }
+  .hero { text-align: center; padding: 44px 8px 18px; }
+  .logo { width: 72px; height: 72px; margin: 0 auto 12px; border-radius: 22px;
+    background: linear-gradient(140deg, #1DA862, #0E5C38); display: flex; align-items: center;
+    justify-content: center; font-size: 34px; box-shadow: var(--shadow); }
   .badges { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 12px; }
-  .pill {
-    font-size: .78rem; font-weight: 600; letter-spacing: .02em;
-    border: 1px solid var(--border); border-radius: 999px;
-    padding: 5px 12px; color: var(--text-dim); background: rgba(255,255,255,.03);
-  }
-  .pill.open { color: #101510; background: var(--ok); border-color: var(--ok); }
-  .pill.closed { color: var(--text); background: transparent; }
-  .hero h1 { font-family: 'Fraunces', serif; font-size: clamp(2rem, 5vw, 3rem); margin: 0 0 6px; line-height: 1.1; }
-  .hero p.tag { color: var(--text-dim); margin: 0 0 10px; font-size: 1.02rem; }
-  .hero-meta { color: var(--text-dim); font-size: .88rem; display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; }
-  .hero-meta b { color: var(--text); }
-  .grid { display: grid; gap: 20px; margin-top: 18px; grid-template-columns: 1fr; }
-  @media (min-width: 860px) {
-    .grid { grid-template-columns: 1.1fr .9fr; align-items: start; }
-    .sticky { position: sticky; top: 16px; }
-  }
-  section.card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: var(--radius); padding: 22px;
-  }
-  section.card h2 { font-family: 'Fraunces', serif; font-size: 1.2rem; margin: 0 0 4px; }
-  .sub { color: var(--text-dim); font-size: .87rem; margin: 0 0 14px; }
-  label { display: block; font-size: .83rem; color: var(--text-dim); margin: 14px 0 5px; font-weight: 500; }
-  input, select, textarea {
-    width: 100%; background: #14110E; border: 1px solid var(--border);
-    border-radius: 7px; color: var(--text); font: inherit; font-size: 1rem; padding: 11px 12px;
-  }
-  textarea { min-height: 64px; resize: vertical; }
-  input:focus-visible, select:focus-visible, textarea:focus-visible, a:focus-visible, button:focus-visible {
-    outline: 2px solid var(--accent); outline-offset: 2px;
-  }
-  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .err-msg { display: none; color: var(--err); font-size: .8rem; margin-top: 4px; }
-  .invalid { border-color: var(--err) !important; }
-  .invalid + .err-msg { display: block; }
-  button.cta {
-    width: 100%; margin-top: 18px; background: var(--accent); color: #1A1714;
-    border: none; border-radius: 7px; font-weight: 700; font-size: 1rem;
-    padding: 14px; cursor: pointer; transition: transform .08s, background .15s;
-  }
-  button.cta:hover { background: var(--accent-hover); }
-  button.cta:active { transform: scale(.99); }
-  button.cta:disabled { opacity: .6; cursor: wait; }
-  .fine { font-size: .78rem; color: var(--text-dim); margin-top: 10px; text-align: center; }
-  #resumen {
-    display: none; margin-top: 14px; background: #14110E; border: 1px dashed var(--border);
-    border-radius: 7px; padding: 12px; font-size: .9rem; color: var(--text-dim);
-  }
-  #resumen b { color: var(--text); }
-  .horarios ul { list-style: none; padding: 0; margin: 0; font-size: .95rem; }
-  .horarios li { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--border); padding: 10px 0; }
-  .horarios li:last-child { border-bottom: 0; }
-  .horarios li span:last-child { color: var(--text); text-align: right; }
+  .pill { font-size: .78rem; font-weight: 600; border: 1px solid var(--border); background: rgba(255,255,255,.04); color: var(--soft); border-radius: 999px; padding: 5px 13px; }
+  .pill.open { background: var(--accent); border-color: var(--accent); color: #06281A; }
+  .pill.gold { color: var(--gold); border-color: #5A4A17; }
+  .hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.9rem, 5vw, 2.7rem); margin: 0 0 4px; }
+  .hero h1 em { font-style: normal; color: var(--accent); }
+  .hero p.tag { color: var(--soft); margin: 0 0 8px; }
+  .hero-meta { color: var(--muted); font-size: .88rem; }
+  .hero-meta b { color: var(--ink); }
+  .strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 16px; }
+  @media (max-width: 560px) { .strip { grid-template-columns: 1fr; } }
+  .mini { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 12px; text-align: center; }
+  .mini b { display: block; font-family: 'Space Grotesk'; font-size: 1.02rem; }
+  .mini span { font-size: .76rem; color: var(--muted); }
+  .grid { display: grid; gap: 18px; margin-top: 20px; grid-template-columns: 1fr; }
+  @media (min-width: 880px) { .grid { grid-template-columns: 1.05fr .95fr; align-items: start; } .sticky { position: sticky; top: 16px; } }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); }
+  .card.green { background: linear-gradient(160deg, #123B28, #0C271C); border-color: #1E5B3D; }
+  .card h2 { font-family: 'Space Grotesk'; margin: 0 0 4px; font-size: 1.28rem; }
+  .sub { color: var(--muted); font-size: .88rem; margin: 0 0 14px; }
+  .kicker { font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+  .serv { display: flex; justify-content: space-between; align-items: center; gap: 12px; border: 1px solid var(--border); border-radius: 12px; padding: 13px 15px; margin-bottom: 10px; background: var(--card2); }
+  .serv .nombre { font-weight: 600; font-size: .93rem; }
+  .serv .detalle { display: block; font-size: .78rem; color: var(--muted); font-weight: 400; }
+  .serv .precio { color: var(--accent); font-weight: 700; white-space: nowrap; font-size: .9rem; }
+  .serv button { border: 1.5px solid var(--accent); background: transparent; color: var(--accent); border-radius: 999px; font: inherit; font-size: .78rem; font-weight: 600; padding: 7px 13px; cursor: pointer; white-space: nowrap; }
+  .serv button:hover { background: var(--accent); color: #06281A; }
+  .horas { list-style: none; padding: 0; margin: 0; }
+  .horas li { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: .92rem; color: var(--soft); }
+  .horas li:last-child { border: 0; }
+  .horas li span:last-child { color: var(--ink); font-weight: 600; }
   .links { display: grid; gap: 10px; }
-  .links a {
-    display: flex; align-items: center; justify-content: center; gap: 8px;
-    text-decoration: none; color: var(--text); border: 1px solid var(--border);
-    border-radius: 7px; padding: 13px; font-size: .95rem; font-weight: 500;
-    background: rgba(255,255,255,.02); transition: border-color .15s, background .15s;
-  }
-  .links a:hover { border-color: var(--accent); background: rgba(201,162,39,.08); }
-  .links a.primary { background: var(--card-2); border-color: #4a443c; font-weight: 600; }
-  .addr { font-size: .9rem; color: var(--text-dim); margin: 0 0 12px; }
-  .addr b { color: var(--text); }
-  footer { text-align: center; color: var(--text-dim); font-size: .75rem; margin-top: 26px; opacity: .8; }
-  .wa-float {
-    position: fixed; right: 16px; bottom: 16px; width: 56px; height: 56px;
-    background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 6px 24px rgba(0,0,0,.45); text-decoration: none; font-size: 28px;
-  }
-  .wa-float:hover { transform: scale(1.05); }
-  @media (prefers-reduced-motion: no-preference) {
-    .wrap { animation: fade .4s ease-out; }
-  }
-  @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  .links a { display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; color: var(--ink); border: 1px solid var(--border); border-radius: 12px; padding: 13px; font-weight: 600; font-size: .93rem; background: rgba(255,255,255,.02); }
+  .links a:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .links a.primary { background: var(--accent); color: #06281A; border-color: var(--accent); }
+  .links a.gold { border-color: #5A4A17; }
+  .links a.gold:hover { border-color: var(--gold); }
+  label { display: block; font-size: .83rem; color: var(--soft); margin: 12px 0 5px; font-weight: 500; }
+  input, select, textarea { width: 100%; border: 1px solid var(--border); border-radius: 10px; padding: 11px 12px; font: inherit; background: #0B1526; color: var(--ink); }
+  textarea { min-height: 64px; resize: vertical; }
+  button.cta { width: 100%; margin-top: 16px; background: var(--accent); color: #06281A; border: none; border-radius: 12px; padding: 15px; font-weight: 700; font-size: 1rem; cursor: pointer; }
+  button.cta:disabled { opacity: .6; cursor: wait; }
+  .fine { font-size: .78rem; color: var(--muted); text-align: center; margin: 10px 0 0; }
+  #resumen { display: none; margin-top: 14px; background: rgba(47,209,128,.1); border: 1px dashed var(--accent); border-radius: 10px; padding: 12px; font-size: .9rem; }
+  footer { text-align: center; color: var(--muted); font-size: .75rem; margin-top: 26px; }
+  .wa-float { position: fixed; right: 16px; bottom: 16px; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; text-decoration: none; box-shadow: 0 8px 26px rgba(0,0,0,.5); }
 </style>
 </head>
 <body>
-<a class="skip" href="#reserva">Saltar a reservar</a>
 <div class="wrap">
-
   <header class="hero">
+    <div class="logo">📱</div>
     <div class="badges">
-      <span class="pill" id="estadoAbierto" role="status">● comprobando horario…</span>
-      <span class="pill">★ 4.8 · 412 reseñas</span>
-      <span class="pill">$$ · Parrilla al quebracho</span>
+      <span class="pill" id="estadoAbierto">● comprobando horario…</span>
+      <span class="pill gold">⭐ Dejanos tu reseña en Google</span>
+      <span class="pill">Reparación en el día</span>
     </div>
-    <h1 id="nombreNegocio">Don Joaquín</h1>
-    <p class="tag" id="tagline">Parrilla al quebracho, vinos de autor y ambiente familiar en Colegiales</p>
-    <div class="hero-meta"><span>📍 <b id="direccionCorta">Av. Álvarez Thomas 1123, Colegiales</b></span><span>·</span><span>🕒 Hoy <b id="hoyHorario">12–15 / 20–00</b></span></div>
+    <h1 id="nombreNegocio">Celulares <em>Demo</em></h1>
+    <p class="tag" id="tagline">Service · Accesorios · Liberaciones — diagnóstico sin cargo</p>
+    <div class="hero-meta">📍 <b id="dirCorta">Av. Demo 1234, Caseros</b> · 🕒 <b>Lun a Sáb 10–20</b></div>
+    <div class="strip">
+      <div class="mini"><b>Mismo día</b><span>reparación express</span></div>
+      <div class="mini"><b>Sin cargo</b><span>diagnóstico y presupuesto</span></div>
+      <div class="mini"><b>30 días</b><span>de garantía escrita</span></div>
+    </div>
   </header>
 
   <div class="grid">
-    <div style="display:grid;gap:20px">
-      <section class="card horarios" aria-labelledby="t-hor">
-        <h2 id="t-hor">Horarios</h2>
-        <p class="sub">Te confirmamos por WhatsApp en minutos.</p>
-        <ul id="listaHorarios">
-          <li><span>Lun a Vie</span><span>12:00–15:00 / 20:00–00:00</span></li>
-          <li><span>Sáb y Dom</span><span>12:00–00:00</span></li>
-        </ul>
+    <div style="display:grid;gap:18px">
+      <section class="card">
+        <span class="kicker">Precios demo — tocá para consultar</span>
+        <h2>Reparaciones</h2>
+        <p class="sub">Valores orientativos. El presupuesto final se confirma por WhatsApp.</p>
+        <div id="servs"></div>
       </section>
 
-      <section class="card" aria-labelledby="t-ubi">
-        <h2 id="t-ubi">Dónde estamos</h2>
-        <p class="addr"><b id="direccionLarga">Av. Álvarez Thomas 1123, Colegiales, Buenos Aires</b><br><span id="comoLlegar">A 2 cuadras de Estación Colegiales · Colectivos 39, 93, 151</span></p>
+      <section class="card">
+        <span class="kicker">Extras del local</span>
+        <h2>Accesorios y más</h2>
+        <p class="sub">Fundas, vidrios templados, cargadores, chips y liberaciones.</p>
         <div class="links">
-          <a id="linkMapa" href="https://maps.google.com/?q=Av.+Alvarez+Thomas+1123+Colegiales" target="_blank" rel="noopener">📍 Cómo llegar en Maps</a>
+          <a id="linkCatalogo" href="https://instagram.com/ramirojoaquinb" target="_blank" rel="noopener">📸 Ver stock en Instagram</a>
         </div>
       </section>
 
-      <section class="card" aria-labelledby="t-links">
-        <h2 id="t-links">Menú y contacto</h2>
-        <p class="sub">Carta, reseñas y redes.</p>
+      <section class="card">
+        <span class="kicker">Grilla semanal</span>
+        <h2>Horarios</h2>
+        <p class="sub">Traelo y te lo llevás andando.</p>
+        <ul class="horas">
+          <li><span>Lunes a Sábado</span><span>10:00–20:00</span></li>
+          <li><span>Domingo</span><span>Cerrado</span></li>
+        </ul>
+        <div style="height:12px"></div>
         <div class="links">
-          <a id="linkMenu" class="primary" href="./menu.pdf" target="_blank" rel="noopener">📖 Ver el menú</a>
-          <a class="link-btn" id="linkResena" href="https://search.google.com/local/writereview?placeid=ChIJ9WLEEQC5vJURlgSg-53ODrs" target="_blank" rel="noopener">⭐ Dejar una reseña en Google</a>
-          <a id="linkInstagram" href="https://instagram.com/donjoaquin.colegiales" target="_blank" rel="noopener">📸 Instagram</a>
-          <a id="linkTelefono" href="tel:+5491155550134">📞 Llamar al +54 9 11 5555-0134</a>
+          <a id="linkMapa" href="https://maps.google.com/?q=Av.+Demo+1234+Caseros" target="_blank" rel="noopener">📍 Cómo llegar en Maps</a>
+        </div>
+      </section>
+
+      <section class="card">
+        <span class="kicker">Comunidad</span>
+        <h2>Reseñas y contacto</h2>
+        <p class="sub">Tu reseña nos ayuda a que nos encuentren. ¡Gracias!</p>
+        <div class="links">
+          <a class="primary" id="linkResena" href="https://search.google.com/local/writereview?placeid=ChIJoYl36oa1vJURWWhqD9z3UV8" target="_blank" rel="noopener">⭐ Dejanos una reseña en Google</a>
+          <a class="gold" id="linkInstagram" href="https://instagram.com/ramirojoaquinb" target="_blank" rel="noopener">📸 Instagram @ramirojoaquinb</a>
+          <a id="linkTelefono" href="tel:+5491144102657">📞 Llamar al 11 4410-2657</a>
         </div>
       </section>
     </div>
 
     <main>
-      <section class="card sticky" id="reserva" aria-labelledby="t-res">
-        <h2 id="t-res">Reservar una mesa</h2>
-        <p class="sub">Sin seña · Confirmación inmediata por WhatsApp</p>
-        <form id="reservaForm" novalidate>
+      <section class="card green sticky" id="consulta">
+        <span class="kicker">Presupuesto en minutos</span>
+        <h2>Consultá tu reparación</h2>
+        <p class="sub">Contanos qué le pasa al equipo y te respondemos con precio y tiempo.</p>
+        <form id="form" novalidate>
           <label for="nombre">Tu nombre</label>
-          <input type="text" id="nombre" name="nombre" autocomplete="name" placeholder="Ej: Joaquín" required minlength="2" maxlength="60">
-          <span class="err-msg" id="e-nombre">Contanos tu nombre (mín. 2 letras).</span>
-
-          <div class="row2">
-            <div>
-              <label for="fecha">Fecha</label>
-              <input type="date" id="fecha" name="fecha" required>
-              <span class="err-msg" id="e-fecha">Elegí una fecha de hoy en adelante.</span>
-            </div>
-            <div>
-              <label for="hora">Hora</label>
-              <input type="time" id="hora" name="hora" required>
-              <span class="err-msg" id="e-hora">Elegí un horario válido.</span>
-            </div>
-          </div>
-
-          <label for="personas">Personas</label>
-          <select id="personas" name="personas">
-            <option value="1">1 persona</option>
-            <option value="2" selected>2 personas</option>
-            <option value="3">3 personas</option>
-            <option value="4">4 personas</option>
-            <option value="5">5 personas</option>
-            <option value="6">6 personas</option>
-            <option value="7">7 personas</option>
-            <option value="8">8 personas</option>
-            <option value="9+">9+ (grupo / evento)</option>
-          </select>
-
-          <label for="notas">Aclaraciones <span style="opacity:.7">(opcional)</span></label>
-          <textarea id="notas" name="notas" maxlength="300" placeholder="Ej: silla de bebé, terraza, cumpleaños…"></textarea>
-
+          <input id="nombre" placeholder="Ej: Ramiro" minlength="2" maxlength="60">
+          <label for="equipo">Modelo del equipo</label>
+          <input id="equipo" placeholder="Ej: Samsung A54" maxlength="60">
+          <label for="falla">Qué le pasa</label>
+          <select id="falla"></select>
+          <label for="notas">Detalle (opcional)</label>
+          <textarea id="notas" maxlength="300" placeholder="Ej: se mojó, no carga, se tildó…"></textarea>
           <div id="resumen" aria-live="polite"></div>
-          <button class="cta" type="submit" id="btnReservar">Reservar por WhatsApp</button>
-          <p class="fine">Al reservar se abre WhatsApp con el mensaje ya armado. No pedimos tarjeta ni seña.</p>
+          <button class="cta" type="submit" id="btn">Pedir presupuesto por WhatsApp</button>
+          <p class="fine">Se abre WhatsApp con el mensaje ya armado. Sin compromiso.</p>
         </form>
       </section>
     </main>
   </div>
 
-  <footer><span id="footNombre">Don Joaquín – Parrilla &amp; Cocina de Estación</span> · Hecho con ♥ en Buenos Aires · Sitio demo ficticio</footer>
+  <footer><span id="foot">Celulares Demo</span> · Página demo — pasame los datos reales y la actualizo</footer>
 </div>
 
-<a class="wa-float" id="waFloat" href="https://wa.me/5491155550134" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">💬</a>
-
-<noscript><p style="text-align:center">Para reservar escribinos por WhatsApp al +54 9 11 5555-0134.</p></noscript>
+<a class="wa-float" id="waFloat" href="https://wa.me/5491144102657?text=Hola!%20Quiero%20un%20presupuesto%20para%20mi%20celu." target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
 
 <script>
 'use strict';
-/* ============ CONFIG por cliente (EMPRESA FICTICIA DEMO) ============ */
+/* ===== CONFIG — editame y listo ===== */
 const CONFIG = {
-  nombreNegocio: "Don Joaquín",
-  nombreLargo: "Don Joaquín – Parrilla & Cocina de Estación",
-  tagline: "Parrilla al quebracho, vinos de autor y ambiente familiar en Colegiales",
-  whatsappNumero: "5491144102657", // FICTICIO - número de ejemplo, no real
-  telefonoDisplay: "+54 9 11 4410-2657",
-  direccionCorta: "Av. Álvarez Thomas 1123, Colegiales",
-  direccionLarga: "Av. Álvarez Thomas 1123, Colegiales, Buenos Aires",
-  comoLlegar: "A 2 cuadras de Estación Colegiales · Colectivos 39, 93, 151",
-  mapsUrl: "https://maps.google.com/?q=Av.+Alvarez+Thomas+1123+Colegiales",
-  menuUrl: "./menu.pdf",
-  resenaGoogleUrl: "https://search.google.com/local/writereview?placeid=ChIJoYl36oa1vJURWWhqD9z3UV8", // formato placeid: solo cambia lo que va después del =
-  instagramUrl: "https://instagram.com/donjoaquin.colegiales",
-  horarios: [
-    { dias: "Lun a Vie", horas: "12:00–15:00 / 20:00–00:00" },
-    { dias: "Sáb y Dom", horas: "12:00–00:00" }
+  nombre: "Celulares Demo",
+  tagline: "Service · Accesorios · Liberaciones — diagnóstico sin cargo",
+  whatsapp: "5491144102657",
+  telefonoDisplay: "11 4410-2657",
+  dirCorta: "Av. Demo 1234, Caseros",
+  dirLarga: "Av. Demo 1234, Caseros",
+  maps: "https://maps.google.com/?q=Av.+Demo+1234+Caseros",
+  resena: "https://search.google.com/local/writereview?placeid=ChIJoYl36oa1vJURWWhqD9z3UV8",
+  instagram: "https://instagram.com/ramirojoaquinb",
+  fallas: [
+    { nombre: "Pantalla rota", detalle: "Cambio de módulo", precio: "desde $25.000" },
+    { nombre: "No carga / pin de carga", detalle: "Limpieza o cambio de pin", precio: "desde $15.000" },
+    { nombre: "Batería", detalle: "Dura poco o se apaga", precio: "desde $18.000" },
+    { nombre: "Se mojó / no prende", detalle: "Diagnóstico sin cargo", precio: "a convenir", destacado: true },
+    { nombre: "Liberación", detalle: "Todas las compañías", precio: "desde $8.000" },
+    { nombre: "Accesorio", detalle: "Funda, vidrio, cargador", precio: "consultar" }
   ]
 };
-
 const $ = (id) => document.getElementById(id);
+document.title = CONFIG.nombre + " · Service y accesorios por WhatsApp";
+$("nombreNegocio").innerHTML = "";
+$("nombreNegocio").append(CONFIG.nombre.split(" ")[0] + " ");
+const em = document.createElement("em"); em.textContent = CONFIG.nombre.split(" ").slice(1).join(" ") || "Demo";
+$("nombreNegocio").append(em);
+$("tagline").textContent = CONFIG.tagline;
+$("dirCorta").textContent = CONFIG.dirCorta;
+$("foot").textContent = CONFIG.nombre;
+$("linkMapa").href = CONFIG.maps;
+$("linkResena").href = CONFIG.resena;
+$("linkInstagram").href = CONFIG.instagram;
+$("linkCatalogo").href = CONFIG.instagram;
+$("linkTelefono").href = "tel:+" + CONFIG.whatsapp;
+$("linkTelefono").textContent = "📞 Llamar al " + CONFIG.telefonoDisplay;
+$("waFloat").href = "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent("Hola " + CONFIG.nombre + "! Quiero un presupuesto para mi celu.");
 
-/* Pintar datos (con textContent, no innerHTML) */
-document.title = `${CONFIG.nombreNegocio} · Parrilla en Colegiales | Reservá por WhatsApp`;
-$('nombreNegocio').textContent = CONFIG.nombreNegocio;
-$('tagline').textContent = CONFIG.tagline;
-$('footNombre').textContent = CONFIG.nombreLargo;
-$('direccionCorta').textContent = CONFIG.direccionCorta;
-$('direccionLarga').textContent = CONFIG.direccionLarga;
-$('comoLlegar').textContent = CONFIG.comoLlegar;
-$('linkMapa').href = CONFIG.mapsUrl;
-$('linkMenu').href = CONFIG.menuUrl;
-$('linkResena').href = CONFIG.resenaGoogleUrl;
-$('linkInstagram').href = CONFIG.instagramUrl;
-$('linkTelefono').href = 'tel:+' + CONFIG.whatsappNumero;
-$('linkTelefono').textContent = `📞 Llamar al ${CONFIG.telefonoDisplay}`;
-$('waFloat').href = `https://wa.me/${CONFIG.whatsappNumero}?text=${encodeURIComponent('Hola Don Joaquín! Quiero hacer una consulta.')}`;
-
-const ul = $('listaHorarios');
-ul.textContent = '';
-CONFIG.horarios.forEach(h => {
-  const li = document.createElement('li');
-  const a = document.createElement('span'); a.textContent = h.dias;
-  const b = document.createElement('span'); b.textContent = h.horas;
-  li.append(a, b); ul.append(li);
+const box = $("servs"), sel = $("falla");
+let elegido = CONFIG.fallas[3].nombre;
+CONFIG.fallas.forEach((s) => {
+  const d = document.createElement("div"); d.className = "serv";
+  const l = document.createElement("div");
+  const n = document.createElement("div"); n.className = "nombre"; n.textContent = s.nombre;
+  const dt = document.createElement("span"); dt.className = "detalle"; dt.textContent = s.detalle;
+  n.append(dt); l.append(n);
+  const p = document.createElement("div"); p.className = "precio"; p.textContent = s.precio;
+  const b = document.createElement("button"); b.type = "button"; b.textContent = "Consultar";
+  b.setAttribute("aria-label", "Consultar por " + s.nombre);
+  b.addEventListener("click", () => { elegido = s.nombre; sel.value = s.nombre; actualiza(); $("consulta").scrollIntoView({ behavior: "smooth", block: "center" }); });
+  d.append(l, p, b); box.append(d);
+  const o = document.createElement("option"); o.value = s.nombre; o.textContent = s.nombre;
+  sel.append(o);
 });
+sel.value = elegido;
+sel.addEventListener("change", () => { elegido = sel.value; actualiza(); });
 
-/* Fecha mínima con hora LOCAL (no UTC) */
-function hoyLocalISO() {
-  const d = new Date();
-  const m = String(d.getMonth() + 1).padStart(2, '0');
-  const day = String(d.getDate()).padStart(2, '0');
-  return `${d.getFullYear()}-${m}-${day}`;
+function abierto(d = new Date()) {
+  if (d.getDay() === 0) return false;
+  const h = d.getHours() + d.getMinutes() / 60;
+  return h >= 10 && h < 20;
 }
-$('fecha').min = hoyLocalISO();
+function pinta() {
+  const el = $("estadoAbierto");
+  const ok = abierto();
+  el.textContent = ok ? "● Abierto ahora" : "● Cerrado ahora";
+  el.classList.toggle("open", ok);
+}
+pinta(); setInterval(pinta, 60000);
 
-/* Badge abierto / cerrado */
-function estaAbierto(date = new Date()) {
-  const dia = date.getDay();
-  const h = date.getHours() + date.getMinutes() / 60;
-  if (dia === 0 || dia === 6) return h >= 12;
-  return (h >= 12 && h < 15) || (h >= 20);
+function actualiza() {
+  const b = $("resumen"), n = $("nombre").value.trim(), e = $("equipo").value.trim();
+  if (!n || !e) { b.style.display = "none"; return; }
+  b.style.display = "block"; b.textContent = "";
+  b.append("Consulta: ");
+  const s = document.createElement("b");
+  s.textContent = e + " · " + elegido + " · " + n;
+  b.append(s);
 }
-function pintaEstado() {
-  const el = $('estadoAbierto');
-  const ok = estaAbierto();
-  el.textContent = ok ? '● Abierto ahora' : '● Cerrado ahora';
-  el.classList.toggle('open', ok);
-  el.classList.toggle('closed', !ok);
-}
-pintaEstado(); setInterval(pintaEstado, 60000);
+["nombre", "equipo"].forEach(id => $(id).addEventListener("input", actualiza));
 
-/* Recordar última visita */
-try {
-  const last = JSON.parse(localStorage.getItem('resto-reserva') || '{}');
-  if (last.nombre) $('nombre').value = last.nombre;
-  if (last.personas) $('personas').value = last.personas;
-} catch {}
-
-/* Validación + resumen en vivo */
-const form = $('reservaForm');
-function valida(campo) {
-  let ok = true;
-  if (campo === 'nombre') ok = $('nombre').value.trim().length >= 2;
-  if (campo === 'fecha') ok = !!$('fecha').value && $('fecha').value >= hoyLocalISO();
-  if (campo === 'hora') ok = !!$('hora').value;
-  if (campo === 'fecha') $('fecha').classList.toggle('invalid', !ok);
-  return ok;
-}
-function actualizaResumen() {
-  const box = $('resumen');
-  const f = $('fecha').value, h = $('hora').value, p = $('personas').value, n = $('nombre').value.trim();
-  if (!f || !h || !n) { box.style.display = 'none'; return; }
-  const ft = new Date(f + 'T00:00:00').toLocaleDateString('es-AR', { weekday: 'long', day: 'numeric', month: 'long' });
-  box.style.display = 'block';
-  box.textContent = '';
-  box.append(`Reserva: `);
-  const b = document.createElement('b');
-  b.textContent = `${p} · ${ft} · ${h} hs · ${n}`;
-  box.append(b);
-}
-['nombre', 'fecha', 'hora', 'personas'].forEach(id => $(id).addEventListener('input', actualizaResumen));
-
-form.addEventListener('submit', (e) => {
+$("form").addEventListener("submit", (e) => {
   e.preventDefault();
-  const okN = valida('nombre'), okF = valida('fecha'), okH = valida('hora');
-  if (!okN) $('nombre').focus();
-  else if (!okF) $('fecha').focus();
-  else if (!okH) $('hora').focus();
-  if (!okN || !okF || !okH) return;
-
-  const btn = $('btnReservar');
-  btn.disabled = true; btn.textContent = 'Abriendo WhatsApp…';
-
-  const nombre = $('nombre').value.trim();
-  const fecha = $('fecha').value, hora = $('hora').value;
-  const personas = $('personas').value, notas = $('notas').value.trim();
-  try { localStorage.setItem('resto-reserva', JSON.stringify({ nombre, personas })); } catch {}
-
-  const fechaTexto = new Date(fecha + 'T00:00:00')
-    .toLocaleDateString('es-AR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
-  let mensaje = `Hola ${CONFIG.nombreNegocio}! Soy ${nombre}. Quiero reservar una mesa para ${personas} persona(s) el ${fechaTexto} a las ${hora} hs.`;
-  if (notas) mensaje += ` Aclaración: ${notas}`;
-  mensaje += ' Gracias!';
-
-  window.open(`https://wa.me/${CONFIG.whatsappNumero}?text=${encodeURIComponent(mensaje)}`, '_blank', 'noopener');
-  setTimeout(() => { btn.disabled = false; btn.textContent = 'Reservar por WhatsApp'; }, 1500);
+  const n = $("nombre"), eq = $("equipo");
+  if (n.value.trim().length < 2) { n.focus(); return; }
+  if (!eq.value.trim()) { eq.focus(); return; }
+  const btn = $("btn");
+  btn.disabled = true; btn.textContent = "Abriendo WhatsApp…";
+  const det = $("notas").value.trim();
+  let msg = "Hola " + CONFIG.nombre + "! Soy " + n.value.trim() + ". Tengo un " + eq.value.trim() + " con problema de: " + elegido + ".";
+  if (det) msg += " Detalle: " + det;
+  msg += " ¿Me pasás presupuesto y tiempo? Gracias!";
+  window.open("https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(msg), "_blank", "noopener");
+  setTimeout(() => { btn.disabled = false; btn.textContent = "Pedir presupuesto por WhatsApp"; }, 1500);
 });
 </script>
 </body>
